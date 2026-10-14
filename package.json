@@ -1,0 +1,35 @@
+{
+  "name": "elected",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:single": "tsc -b && vite build --mode single",
+    "test": "vitest run",
+    "typecheck": "tsc -b",
+    "schema": "vite-node scripts/export-schema.ts",
+    "build:artifact": "npm run build:single && node scripts/make-artifact.mjs",
+    "balance": "vite-node scripts/balance.ts",
+    "build:nz1993": "vite-node scripts/build-nz1993.ts"
+  },
+  "dependencies": {
+    "fflate": "^0.8.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/polylabel": "^2.0.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "polylabel": "^2.1.0",
+    "svgpath": "^2.6.0",
+    "typescript": "^7.0.2",
+    "vite": "^5.4.21",
+    "vite-plugin-singlefile": "^2.3.3",
+    "vitest": "^2.1.9"
+  }
+}
